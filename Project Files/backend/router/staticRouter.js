@@ -8,7 +8,7 @@ router.get("/",(req,res)=>{
 
 router.post("/AddProducts",(req,res)=>{
     res.status(200).send("ProductAdded");
- })
+ });
 
  module.exports = router
 

@@ -6,9 +6,11 @@ const mongoose = require("mongoose")
 const express = require("express");
 const app = express();
 const router = require("./router/staticRouter");
+const productRouter = require("./router/productRouter");
 
 app.use(express.json());
 app.use("/", router);
+app.use("/api", productRouter);
 
 const connectDb = async () => {
     try {
