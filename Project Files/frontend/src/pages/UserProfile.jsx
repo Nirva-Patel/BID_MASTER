@@ -2,113 +2,109 @@ import { useState } from 'react';
 
 const UserProfile = () => {
   const [userData, setUserData] = useState({
-    name: "Jami Sidhava",
-    email: "jamisidhava@gmail.com",
-    joinDate: "January 2024"
+    name: "",
+    email: "",
+    joinDate: ""
   });
-
+  
+  //Data to be fetched from database . Dummy data is displayed
   const [auctionHistory] = useState([
     { id: 1, item: "Vintage Watch", status: "Won", price: "$250", date: "2024-03-15", type: "purchase" },
     { id: 2, item: "Art Piece", status: "Lost", price: "$180", date: "2024-03-10", type: "purchase" },
     { id: 3, item: "Collectible Card", status: "Active", price: "$120", date: "2024-03-20", type: "purchase" },
   ]);
-
+  
+  //Data to be fetched from database
   const [itemsSold] = useState([
     { id: 4, item: "Antique Lamp", price: "$350", date: "2024-04-02", status: "Sold", type: "sale" },
     { id: 5, item: "Luxury Bag", price: "$1200", date: "2024-04-05", status: "Sold", type: "sale" },
     { id: 6, item: "Classic Guitar", price: "$500", date: "2024-04-12", status: "Sold", type: "sale" },
     { id: 7, item: "Rare Book", price: "$85", date: "2024-04-20", status: "Sold", type: "sale" }
   ]);
-
+  
   const styles = {
     pageBackground: {
-      background: 'linear-gradient(135deg, #ffddc1, #fad0c4, #fcb69f)',
+      backgroundColor: '#FAF3E0',
       minHeight: '100vh',
       display: 'flex',
-      justifyContent: 'center',
       alignItems: 'center',
-      padding: '40px'
+      justifyContent: 'center',
+      padding: '20px',
     },
     container: {
-      maxWidth: '1000px',
-      width: '90%',
-      padding: '30px',
-      borderRadius: '12px',
-      backgroundColor: '#ffffff',
-      boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)',
-      fontFamily: 'Arial, sans-serif'
-    },
-    header: {
+      maxWidth: '900px',
+      width: '100%',
+      backgroundColor: '#FFF',
+      boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+      borderRadius: '8px',
       padding: '20px',
-      backgroundColor: '#3a3f51',
-      color: 'white',
-      borderRadius: '12px',
-      marginBottom: '25px',
-      fontSize: '1.5em',
-      textAlign: 'center'
-    },
-    profileDetails: {
-      marginBottom: '30px',
-      textAlign: 'center',
-      fontSize: '1em',
-      color: '#666'
     },
     label: {
       display: 'block',
-      fontSize: '1em',
-      color: '#666',
       marginBottom: '10px',
-      fontWeight: 'bold'
+      fontWeight: 'bold',
     },
     input: {
       width: '100%',
-      padding: '10px',
-      fontSize: '1em',
-      borderRadius: '6px',
+      padding: '8px',
+      marginBottom: '15px',
+      borderRadius: '4px',
       border: '1px solid #ccc',
-      marginTop: '8px'
     },
     mainContent: {
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '30px'
+      display: 'flex',
+      gap: '20px',
+      marginTop: '20px',
     },
     historySection: {
-      textAlign: 'left'
+      flex: 1,
+      backgroundColor: '#F9F9F9',
+      padding: '15px',
+      borderRadius: '6px',
+      boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
     },
     historyTitle: {
-      fontSize: '1.5em',
-      fontWeight: 'bold',
+      fontSize: '1.2em',
+      marginBottom: '10px',
       color: '#333',
-      marginBottom: '10px'
+      textAlign: 'center',
     },
     table: {
       width: '100%',
       borderCollapse: 'collapse',
-      fontSize: '1em',
-      color: '#444'
     },
     th: {
-      backgroundColor: '#4a4e69',
-      color: 'white',
-      padding: '12px',
-      textAlign: 'center',
-      borderBottom: '2px solid #ddd'
+      textAlign: 'left',
+      fontWeight: 'bold',
+      borderBottom: '2px solid #ddd',
+      padding: '8px',
     },
     td: {
-      padding: '12px',
-      borderBottom: '1px solid #ddd',
-      textAlign: 'center'
+      padding: '8px',
+      borderBottom: '1px solid #eee',
     },
     status: {
+      fontWeight: 'bold',
       padding: '5px 10px',
-      borderRadius: '8px',
-      fontWeight: 'bold'
+      borderRadius: '4px',
+      display: 'inline-block',
+      textAlign: 'center',
     },
-    wonStatus: { backgroundColor: '#e1f8e1', color: '#2d6a2d' },
-    lostStatus: { backgroundColor: '#ffe6e6', color: '#d9534f' },
-    activeStatus: { backgroundColor: '#fdf5e6', color: '#f0ad4e' }
+    wonStatus: {
+      color: '#fff',
+      backgroundColor: '#4CAF50',
+    },
+    lostStatus: {
+      color: '#fff',
+      backgroundColor: '#F44336',
+    },
+    activeStatus: {
+      color: '#fff',
+      backgroundColor: '#FFC107',
+    },
   };
+  
+  
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -130,8 +126,8 @@ const UserProfile = () => {
     <div style={styles.pageBackground}>
       <div style={styles.container}>
         {/* Profile Details with Input Fields */}
-        <div style={styles.header}>
-        <h1>{userData.name}'s Profile</h1>
+        {/* <div style={styles.header}> */}
+        {/* <h1>{userData.name}'s Profile</h1> */}
           <label style={styles.label}>
             Name:
             <input 
@@ -152,8 +148,7 @@ const UserProfile = () => {
               style={styles.input}
             />
           </label>
-          <p>Member since: {userData.joinDate}</p>
-        </div>
+        {/* </div> */}
 
         {/* Main Content - Auction History and Item Sold */}
         <div style={styles.mainContent}>

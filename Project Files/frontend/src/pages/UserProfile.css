@@ -1,0 +1,90 @@
+/* 
+    pageBackground: {
+      background: 'linear-gradient(135deg, #ffddc1, #fad0c4, #fcb69f)', // Background gradient
+      minHeight: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: '40px',
+      fontFamily: "'Arial', sans-serif"
+    },
+    container: {
+      maxWidth: '1000px',
+      width: '90%',
+      padding: '30px',
+      borderRadius: '12px',
+      backgroundColor: '#ffffff', // White background
+      boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)', // Soft shadow
+      fontFamily: 'Arial, sans-serif',
+      borderTop: '2px solid #d3b58f' // Adding a top border like the footer
+    },
+    header: {
+      padding: '20px',
+      backgroundColor: '#3a3f51', // Dark background for the header
+      color: 'white',
+      borderRadius: '12px',
+      marginBottom: '25px',
+      fontSize: '1.5em',
+      textAlign: 'center'
+    },
+    profileDetails: {
+      marginBottom: '30px',
+      textAlign: 'center',
+      fontSize: '1em',
+      color: '#666'
+    },
+    label: {
+      display: 'block',
+      fontSize: '1em',
+      color: '#666',
+      marginBottom: '10px',
+      fontWeight: 'bold'
+    },
+    input: {
+      width: '100%',
+      padding: '10px',
+      fontSize: '1em',
+      borderRadius: '6px',
+      border: '1px solid #ccc',
+      marginTop: '8px'
+    },
+    mainContent: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: '30px'
+    },
+    historySection: {
+      textAlign: 'left'
+    },
+    historyTitle: {
+      fontSize: '1.5em',
+      fontWeight: 'bold',
+      color: '#333',
+      marginBottom: '10px'
+    },
+    table: {
+      width: '100%',
+      borderCollapse: 'collapse',
+      fontSize: '1em',
+      color: '#444'
+    },
+    th: {
+      backgroundColor: '#4a4e69', // Dark background for table headers
+      color: 'white',
+      padding: '12px',
+      textAlign: 'center',
+      borderBottom: '2px solid #ddd'
+    },
+    td: {
+      padding: '12px',
+      borderBottom: '1px solid #ddd',
+      textAlign: 'center'
+    },
+    status: {
+      padding: '5px 10px',
+      borderRadius: '8px',
+      fontWeight: 'bold'
+    },
+    wonStatus: { backgroundColor: '#e1f8e1', color: '#2d6a2d' },
+    lostStatus: { backgroundColor: '#ffe6e6', color: '#d9534f' },
+    activeStatus: { backgroundColor: '#fdf5e6', color: '#f0ad4e' } */
